@@ -1,0 +1,18 @@
+.test_boxes{
+	    line-height: 28px;
+    padding-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+        margin: 10px;
+}
+
+.col-xs-12{
+	padding:0px;
+}
+
+.test_block{
+	padding-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    line-height: 30px;
+}

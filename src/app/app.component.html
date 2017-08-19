@@ -1,0 +1,161 @@
+<nav class="navbar navbar-default navbar-fixed-top" id='home' >
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="./assets/img/logo.jpg" class="img-responsive"><h3 class="top_logo1">LearnWiz<sup>©</sup></h3>
+                <span class="top_logo_text1">Honing the Art of Education</span></a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-1" *ngIf = "isLogin == 0">
+           <ul class="nav navbar-nav pull-right">
+                    <li class="navItemList">
+                        <a routerLink='/' class="nav_items">Home</a>
+                    </li>
+                    <li class="navItemList">
+                        <a routerLink='/about' class="nav_items">About Us</a>
+                    </li>
+                    <li class="navItemList">
+                        <a routerLink="/learnwiz" class="nav_items">LearnWiz</a>
+                    </li>
+					<li class="navItemList">
+                        <a routerLink="/contact" class="nav_items">Contact Us</a>
+                    </li>
+					<li class="navItemList">
+                        <a routerLink="/login" class="nav_items">Login</a>
+                    </li>
+					
+                </ul>
+           
+        </div><!-- /.navbar-collapse -->
+
+
+         <div class="collapse navbar-collapse" id="navbar-collapse-1" *ngIf = "isLogin == 1">
+           <ul class="nav navbar-nav pull-right">
+                    <li class="navItemList">
+                        <a routerLink='/teacher/dashboard' class="nav_items">Dashboard</a>
+                    </li>
+                    <li class="navItemList">
+                        <a routerLink='/teacher/prepareList' class="nav_items">Prepare</a>
+                    </li>
+                    <li class="navItemList">
+                        <a routerLink="#" class="nav_items">Teach</a>
+                    </li>
+					<li class="navItemList">
+                        <a routerLink="#" class="nav_items">Homework</a>
+                    </li>
+                     <li class="navItemList">
+                        <a routerLink="/teacher/test" class="nav_items">Test</a>
+                    </li>
+                    <li class="navItemList">
+                        <a routerLink="teacher/profile" class="nav_items">MyProfile</a>
+                    </li>
+					<li class="navItemList">
+                        <a routerLink="#" class="nav_items" (click) = "logout()">Logout</a>
+                    </li>
+					
+                </ul>
+           
+        </div><!-- /.navbar-collapse -->
+
+
+
+                <div class="collapse navbar-collapse" id="navbar-collapse-1" *ngIf = "isLogin == 2">
+           <ul class="nav navbar-nav pull-right">
+                    <li class="navItemList">
+                        <a routerLink='#' class="nav_items">Dashboard</a>
+                    </li>
+                    <li class="navItemList">
+                        <a routerLink='#' class="nav_items">Study</a>
+                    </li>
+          <li class="navItemList">
+                        <a routerLink="#" class="nav_items">Homework</a>
+                    </li>
+                     <li class="navItemList">
+                        <a routerLink="#" class="nav_items">Verify</a>
+                    </li>
+                    <li class="navItemList">
+                        <a routerLink="/student/profile" class="nav_items">MyProfile</a>
+                    </li>
+          
+                </ul>
+           
+        </div><!-- /.navbar-collapse -->
+
+
+
+
+      </div><!-- /.container -->
+       <hr class="colorgraph1" style="margin-top:0px !important;margin-bottom:0px !important;">
+    </nav><!-- /.navbar -->
+
+<router-outlet></router-outlet>
+
+
+
+<!-- <footer class="footer fixed-bottom">
+	 <hr class="colorgraph1" style="margin-top:10px !important;margin-bottom:0px !important;">
+      <div class="container">
+       
+         <p class="text-muted footer_text">
+         <img src="./assets/img/pg_logo.png" height="35px;">  
+         Copyright © Pegasus Consulting, 2016
+         <span class="pull-right">Technology Partner: 
+	         <a href="http://codematrixindia.com/">
+	         <img src="./assets/img/CM_logo.png" height="35px;">
+	         </a>
+         </span>
+  
+         </p>
+      </div>
+</footer> -->
+
+<div class="navbar navbar-fixed-bottom ">
+     <hr class="colorgraph1" style="margin-bottom:0px !important;">
+      <div class="container">
+       <div class="col-sm-12">
+         <div class="col-sm-4">
+            <p class="text-muted footer_text">
+           <img src="./assets/img/pg_logo.png" height="35px;">  
+           Copyright © Pegasus Consulting, 2016
+           </p>
+         </div>
+
+         <div class="col-sm-4 text-center social">
+            <!-- <p class="text-muted footer_text">  -->
+              <ul class="list-inline">
+                <li class="social_list"><img src="./assets/img/google-plus.png" title="Google Plus" class="social_icons"></li>
+                <li class="social_list"><img src="./assets/img/facebook.png" title="Facebook" class="social_icons"></li>
+                <li class="social_list"><img src="./assets/img/linkedin.png" title="LinkedIn" class="social_icons"></li>
+              </ul>
+            <!-- </p> -->
+         </div>
+
+         <div class="col-sm-4">
+          <p class="text-muted footer_text"> 
+           Technology Partner: 
+           <img src="./assets/img/CM_logo.png" height="35px;"> 
+           </p>
+         </div>
+
+       </div>
+      </div>
+</div>
+
+<!-- <span class="pull-right">
+           <a href="http://codematrixindia.com/">
+           <img src="./assets/img/CM_logo.png" height="35px;">
+           </a>
+         </span> -->
+
+       <!--   <ul class="list-inline">
+            <li><i class="fa fa-google-plus-official" aria-hidden="true"></i></li>
+            <li><i class="fa fa-google-plus-official" aria-hidden="true"></i></li>
+            <li><i class="fa fa-google-plus-official" aria-hidden="true"></i></li>
+          </ul> -->

@@ -1,0 +1,60 @@
+<div class="container login_div main_page">
+   <div class="container-fluid" id="content">
+      <div class="row">
+         <div class="col-md-12 col-sm-12" style="margin-bottom:0px;">
+            <div class="col-md-5  login_form_img">
+               <img src="./assets/img/colored.jpg" class="img-responsive home_banner" width="100%">
+            </div>
+            <div class="col-md-6 col-md-offset-1 home_logo">
+               <div class="panel-title-sign mt-xl text-center alert_div">
+                  <div class="alert alert-info">
+                     <button class="close" data-dismiss="alert">&times;</button><strong></strong> 
+                     <p> For Teacher -> Username = teacher@gmail.com and Password = teacher </p>
+                     <p>For Student -> Username = student@gmail.com and Password = student </p>
+                  </div>
+               </div>
+               <div class="panel-title-sign mt-xl text-center">
+                  <!-- <?php if(isset($message)){  echo $message;   echo $user_name; } ?> -->
+               </div>
+               <div class="h_logo">                
+               </div>
+               <fieldset>
+                  <hr class="colorgraph">
+
+                  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                     <div class="form-group">
+
+                        <div class="form-group">
+                           <input type="email" name="usr_email" formControlName="usr_email" class="form-control input-lg" placeholder="Email Address" required>
+                        </div>
+
+                        <div class="form-group">
+                           <input type="password" name="usr_password" formControlName="usr_password" class="form-control input-lg" placeholder="Password" required>
+                        </div>
+
+                        <span class="button-checkbox">
+                           <!--<button type="button" class="btn" data-color="info">Remember Me</button>
+                              <input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">-->
+                           <a href="#" class="btn btn-link help" data-toggle="tooltip" title="Help From Admin Desk">Need Help?</a>
+                           <a data-toggle="tooltip" title="For New Password" href="#" class="btn btn-link pull-right help">Forgot Password?</a>
+                        </span>
+
+                        <hr class="colorgraph">
+
+                        <div class="row">
+                           <div class="col-md-6 col-md-offset-3">
+
+                           <button type="submit" class="btn btn-lg btn-warning btn-block" name="user_submit">Sign In</button>
+                           </div>
+                        </div>
+
+                     </div>
+                  </form>
+
+               </fieldset>
+            </div>
+         </div>
+      </div>
+      <!-- /.row -->
+   </div>
+</div>

@@ -71,7 +71,7 @@
   <div id="table-tree-grid" class="row">
     <tree-root #tree [nodes]="nodes" [options]="" [focused]="true" (event)="onEvent($event)" (initialized)="onInitialized(tree)">
       <ng-template #treeNodeTemplate let-node>
-        <div style="width:100%"> <a href="http://codematrix.space/whiteboard/maths/{{node.data.id}}.html">{{ node.data.name }}</a>
+        <div style="width:100%"> <a href="http://codematrix.space/whiteboard/maths.html">{{ node.data.name }}</a>
           <input type="date" name="date" class="date-picker date-status-{{node.data.status}}" value={{node.data.date}}/> </div>
       </ng-template>s
       <ng-template #loadingTemplate>Loading, please hold....</ng-template>

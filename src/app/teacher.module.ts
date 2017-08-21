@@ -9,6 +9,7 @@ import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard
 import { TeacherProfileComponent } from './teacher-profile/teacher-profile.component';
 import { TeacherTestComponent } from './teacher-test/teacher-test.component';
 import { TeacherHomeworkComponent } from './teacher-homework/teacher-homework.component';
+import { TeacherTeachComponent } from './teacher-teach/teacher-teach.component';
 
 
 
@@ -18,6 +19,7 @@ const routes: Routes=[
 { path: 'profile', component: TeacherProfileComponent},
 { path: 'test', component:TeacherTestComponent },
 { path: 'homework', component:TeacherHomeworkComponent },
+{ path: 'teach', component: TeacherTeachComponent},
 
 ];
 
@@ -29,6 +31,6 @@ const routes: Routes=[
     TreeModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PrepareListComponent, TeacherDashboardComponent, TeacherProfileComponent, TeacherTestComponent, TeacherHomeworkComponent]
+  declarations: [PrepareListComponent, TeacherDashboardComponent, TeacherProfileComponent, TeacherTestComponent, TeacherHomeworkComponent, TeacherTeachComponent]
 })
 export class TeacherModule { }

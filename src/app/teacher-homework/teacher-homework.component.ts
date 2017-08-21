@@ -37,39 +37,56 @@ export class TeacherHomeworkComponent implements OnInit {
   constructor() {
     this.nodes = [{
 			id: '',
-			name: 'Chapter 1',
+			name: 'Exercise 1',
 			date: '2017-08-19',
 			status: '2',
-      		published: false,
+      published: false,
 			children: [{
-				name: 'Sub Chapater 1',
+				name: '1. Using appropriate properties find  -2/3 x 3/5 + 5/2 - 3/5 x 1/6 ?',
 				date: '2017-08-20',
 				status: '3',
-       			published: false,
-       			children: [{
-					name: '1.1.a final topic',
-					date: '2017-08-20',
-					status: '1',
-					published: false,
-       			}]
-			}]
-		}, {
-			id: 2,
-			name: 'Chapater 2',
-			date: '2017-08-20',
-			status: '3',
-      		published: false,
-			children: [{
-				name: 'Sub topic 1',
-				status: '0',
-        		published: false,
-        		children: [{
-        			name: 'Sub Chapater 2',
-					status: '0',
-	        		published: false,
-        		}]
-				}]
-			}];
+       	published: false,
+       			
+			},
+      {
+        name: '2. Write the additive inverse of each of the following (i) 2/8 (ii) -5/9 (iii) -6/5 (iv) 2/-9 ?',
+        date: '2017-08-20',
+        status: '3',
+         published: false,
+             
+      },
+      {
+        name: '3. Verify that -(-x) = x for. (i) x =11/15 (ii) x = -13/17 ?',
+        date: '2017-08-20',
+        status: '3',
+         published: false,
+             
+      },{
+        name: '4. Find the multiplicative inverse of the following. (i) -13 (ii) -13/19 (iii) 1/5 (iv) (-5/8) X (-3/7) ?',
+        date: '2017-08-20',
+        status: '3',
+         published: false,
+             
+      },{
+        name: '5. Multiply 6/13 by the reciprocal of -7/16 ?',
+        date: '2017-08-20',
+        status: '3',
+         published: false,
+             
+      },{
+        name: '6. Is 0.3 the multiplicative inverse of 3(1/3)? Why or why not?',
+        date: '2017-08-20',
+        status: '3',
+         published: false,
+             
+      },{
+        name: '7. Write. <br>(i) The rational number that does not have a reciprocal.',
+        date: '2017-08-20',
+        status: '3',
+         published: false,
+             
+      }]
+		}];
   }
 
   ngOnInit() {

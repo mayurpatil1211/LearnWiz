@@ -16,19 +16,19 @@
         <div class="collapse navbar-collapse" id="navbar-collapse-1" *ngIf = "isLogin == 0">
            <ul class="nav navbar-nav pull-right">
                     <li class="navItemList">
-                        <a routerLink='/' class="nav_items">Home</a>
+                        <a routerLink='/' [routerLinkActive]="['is-active']"  class="nav_items">Home</a>
                     </li>
                     <li class="navItemList">
-                        <a routerLink='/about' class="nav_items">About Us</a>
+                        <a routerLink='/about' [routerLinkActive]="['is-active']" class="nav_items">About Us</a>
                     </li>
                     <li class="navItemList">
-                        <a routerLink="/learnwiz" class="nav_items">LearnWiz</a>
+                        <a routerLink="/learnwiz" [routerLinkActive]="['is-active']" class="nav_items">LearnWiz</a>
                     </li>
 					<li class="navItemList">
-                        <a routerLink="/contact" class="nav_items">Contact Us</a>
+                        <a routerLink="/contact" [routerLinkActive]="['is-active']" class="nav_items">Contact Us</a>
                     </li>
 					<li class="navItemList">
-                        <a routerLink="/login" class="nav_items">Login</a>
+                        <a routerLink="/login" [routerLinkActive]="['is-active']" class="nav_items">Login</a>
                     </li>
 					
                 </ul>
@@ -39,24 +39,21 @@
          <div class="collapse navbar-collapse" id="navbar-collapse-1" *ngIf = "isLogin == 1">
            <ul class="nav navbar-nav pull-right">
                     <li class="navItemList">
-                        <a routerLink='/teacher/dashboard' class="nav_items">Dashboard</a>
+                        <a routerLink='/teacher/dashboard' [routerLinkActive]="['is-active']" class="nav_items">Dashboard</a>
                     </li>
                     <li class="navItemList">
-                        <a routerLink='/teacher/prepareList' class="nav_items">Prepare</a>
+                        <a routerLink='/teacher/prepareList' [routerLinkActive]="['is-active']" class="nav_items">Prepare</a>
                     </li>
                     <li class="navItemList">
-                        <a routerLink="#" class="nav_items">Teach</a>
-                    </li>
-					<li class="navItemList">
-                        <a routerLink="/teacher/homework" class="nav_items">Homework</a>
+                        <a routerLink="/teacher/homework" [routerLinkActive]="['is-active']" class="nav_items">Homework</a>
                     </li>
                      <li class="navItemList">
-                        <a routerLink="/teacher/test" class="nav_items">Test</a>
+                        <a routerLink="/teacher/test" [routerLinkActive]="['is-active']" class="nav_items">Test</a>
                     </li>
                     <li class="navItemList">
-                        <a routerLink="teacher/profile" class="nav_items">MyProfile</a>
+                        <a routerLink="teacher/profile" [routerLinkActive]="['is-active']" class="nav_items">MyProfile</a>
                     </li>
-					<li class="navItemList">
+                    <li class="navItemList">
                         <a routerLink="#" class="nav_items" (click) = "logout()">Logout</a>
                     </li>
 					
@@ -72,16 +69,16 @@
                         <a routerLink='/student/dashboard' class="nav_items">Dashboard</a>
                     </li>
                     <li class="navItemList">
-                        <a routerLink='#' class="nav_items">Study</a>
+                        <a routerLink='#' [routerLinkActive]="['is-active']" class="nav_items">Study</a>
                     </li>
           <li class="navItemList">
-                        <a routerLink="#" class="nav_items">Homework</a>
+                        <a routerLink="#" [routerLinkActive]="['is-active']" class="nav_items">Homework</a>
                     </li>
                      <li class="navItemList">
-                        <a routerLink="#" class="nav_items">Verify</a>
+                        <a routerLink="#" [routerLinkActive]="['is-active']" class="nav_items">Verify</a>
                     </li>
                     <li class="navItemList">
-                        <a routerLink="/student/profile" class="nav_items">MyProfile</a>
+                        <a routerLink="/student/profile" [routerLinkActive]="['is-active']" class="nav_items">MyProfile</a>
                     </li>
                      <li class="navItemList">
                         <a routerLink="#" class="nav_items" (click) = "logout()">Logout</a>

@@ -9,7 +9,7 @@
 
 .date-status-0{
    color:black;
-   background-color: gray;
+  background-color: #d8d7d8;;
 }
 
 .date-status-1{
@@ -75,4 +75,9 @@ button:focus {
 /*for IE10*/
 select::-ms-expand {
     display: none;
+}
+
+.teach_slide{
+  text-decoration: none;
+  color: #fff;
 }

@@ -134,6 +134,14 @@ body {
   transform: scale(1.1);
 }
 
+.is-active{
+       font-size: 13px;
+    font-weight: 600;
+    color: #ff8c00 !important;
+    text-decoration: none;  
+    -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
 .colorgraph {
   height: 1px;

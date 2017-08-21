@@ -698,6 +698,71 @@ ul
 
 /*---------------------------------------------------student dashboard-------------------------------------------*/
 
+/*------------------- Tree Grid Table -------------- */
+.node-content-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  flex-grow: 1;
+  position: relative;
+}
+
+.node-content-wrapper, .tree-children {
+  position: relative;
+}
+
+.node-content-wrapper::before, .tree-children::after {
+  content: "";
+  position: absolute;
+}
+
+.node-content-wrapper::before {
+  border-bottom: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  height: 28px;
+  top: -17px;
+  width: 20px;
+  left: -28px;
+}
+
+.tree-node-leaf > .node-wrapper > .node-content-wrapper::before {
+  width: 25px;
+}
+
+.tree-children::after {
+  border-left: 1px solid lightgrey;
+  height: 100%;
+  top: -15px;
+  left: -15px;
+}
+
+treenode:last-child > .tree-node > .tree-children::after {
+  border-left: none;
+}
+
+.toggle-children {
+  z-index: 1;
+}
+
+.tree-node-level-1{
+    border-bottom: 1px solid black;
+}
+
+
+select {
+        /*for firefox*/
+        -moz-appearance: none;
+        /*for chrome*/
+        -webkit-appearance:none;
+        appearance: none;
+        padding: 2px 30px 2px 2px;
+        border: none;
+      }
+
+/*for IE10*/
+select::-ms-expand {
+    display: none;
+}
 
 
 

@@ -47,11 +47,7 @@
               <button class="btn btn-xs btn-primary">GO</button>
             </a>
           </li>
-          <li class="list-inline-item">
-            <a href="#" data-toggle="tooltip" title="Go to the Slides">
-              <button class="btn btn-success btn-xs">TEACH</button>
-            </a>
-          </li>
+     
           <li class="list-inline-item">
             <a href="#" data-toggle="tooltip" title="To Publish the Modules">
               <button class="btn btn-info btn-xs">PUBLISH</button>
@@ -63,19 +59,22 @@
   </div>
   <div class="row">
     <div class="col-md-10">
-      <h4>Module</h4> </div>
+      <h4>Homework</h4> </div>
     <div class="col-md-2 text-center">
       <h4>Date</h4> </div>
   </div>
   <hr>
+
+
   <div id="table-tree-grid" class="row">
     <tree-root #tree [nodes]="nodes" [options]="" [focused]="true" (event)="onEvent($event)" (initialized)="onInitialized(tree)">
       <ng-template #treeNodeTemplate let-node>
-        <div style="width:100%"> <a href="http://codematrix.space/whiteboard/maths/{{node.data.id}}.html">{{ node.data.name }}</a>
+        <div style="width:100%"> <a href="http://codematrix.space/whiteboard/maths/{{node.data.id}}.html" target="_blank">{{ node.data.name }}</a>
           <input type="date" name="date" class="date-picker date-status-{{node.data.status}}" value={{node.data.date}}/> </div>
       </ng-template>s
       <ng-template #loadingTemplate>Loading, please hold....</ng-template>
     </tree-root>
   </div>
+
 </div>
 <!-- container end -->

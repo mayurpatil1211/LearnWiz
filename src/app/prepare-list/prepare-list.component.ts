@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TreeNode, TreeModel, TREE_ACTIONS, KEYS, IActionMapping, ITreeOptions } from 'angular-tree-component';
+import { IMyDpOptions } from 'mydatepicker';
 
 const actionMapping:IActionMapping = {
   mouse: {
@@ -27,6 +28,18 @@ const actionMapping:IActionMapping = {
   styleUrls: ['./prepare-list.component.css']
 })
 export class PrepareListComponent implements OnInit {
+	private myDatePickerOptions: IMyDpOptions = {
+    // other options...
+    dateFormat: 'yyyy-mm-dd',
+    showTodayBtn: true,
+    minYear: 2017,
+    maxYear: 2019,
+    openSelectorOnInputClick: true,
+    inline: false,
+    editableDateField: false,
+    //disableUntil: { year: 2017, month: 7, day: 25 },
+    //disableDays: [{ year: 2017, month: 7, day: 27 }, { year: 2017, month: 8, day: 15 }]
+  };
 	isLogin: boolean = true;
 
   nodes = [];
@@ -34,7 +47,7 @@ export class PrepareListComponent implements OnInit {
     this.nodes = [{
 			id: 1,
 			name: '1. Sets',
-			date: '2017-08-19',
+			date: '2017-10-19',
 			status: '2',
       		published: false,
 			children: [{

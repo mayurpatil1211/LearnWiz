@@ -125,14 +125,14 @@ body {
 
 
 
-.nav_items:hover, .nav_items:focus, .nav_items:active{
+/*.nav_items:hover, .nav_items:focus, .nav_items:active{
       font-size: 13px;
     font-weight: 600;
     color: #ff8c00 !important;
     text-decoration: none;  
     -webkit-transform: scale(1.1);
   transform: scale(1.1);
-}
+}*/
 
 .is-active{
        font-size: 13px;
@@ -740,8 +740,8 @@ ul
 .tree-children::after {
   border-left: 1px solid lightgrey;
   height: 100%;
-  top: -15px;
-  left: -15px;
+  /*top: -15px;
+  left: -15px;*/
 }
 
 treenode:last-child > .tree-node > .tree-children::after {
@@ -757,15 +757,13 @@ treenode:last-child > .tree-node > .tree-children::after {
 }
 
 
-select {
-        /*for firefox*/
+/*select {
         -moz-appearance: none;
-        /*for chrome*/
         -webkit-appearance:none;
         appearance: none;
         padding: 2px 30px 2px 2px;
         border: none;
-      }
+      }*/
 
 /*for IE10*/
 select::-ms-expand {

@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="navbar-collapse-1" *ngIf = "isLogin == 0">
            <ul class="nav navbar-nav pull-right">
                     <li class="navItemList">
-                        <a routerLink='/' [routerLinkActive]="['is-active']"  class="nav_items">Home</a>
+                        <a routerLink='' [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['is-active']"  class="nav_items">Home</a>
                     </li>
                     <li class="navItemList">
                         <a routerLink='/about' [routerLinkActive]="['is-active']" class="nav_items">About Us</a>

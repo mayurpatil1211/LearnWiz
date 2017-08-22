@@ -51,11 +51,6 @@
 }
 
 select {
-    /*for firefox*/
-    -moz-appearance: none;
-    /*for chrome*/
-    -webkit-appearance:none;
-    appearance: none;
     
     padding: 2px 30px 2px 20px;
     border: none;
@@ -80,4 +75,8 @@ select::-ms-expand {
 .teach_slide{
   text-decoration: none;
   color: #fff;
+}
+select,select:focus,select:active {
+    box-shadow: none !important;
+    border: 1px solid;
 }

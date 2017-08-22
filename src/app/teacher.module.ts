@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { TreeModule } from 'angular-tree-component';
+import { MyDatePickerModule } from 'mydatepicker';
 
 import { PrepareListComponent } from './prepare-list/prepare-list.component';
 import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
@@ -28,6 +29,7 @@ const routes: Routes=[
 @NgModule({
   imports: [
     CommonModule,
+    MyDatePickerModule,
     TreeModule,
     RouterModule.forChild(routes)
   ],

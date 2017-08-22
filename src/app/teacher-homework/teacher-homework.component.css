@@ -51,11 +51,6 @@
 }
 
 select {
-    /*for firefox*/
-    -moz-appearance: none;
-    /*for chrome*/
-    -webkit-appearance:none;
-    appearance: none;
     
     padding: 2px 30px 2px 20px;
     border: none;
@@ -75,4 +70,9 @@ button:focus {
 /*for IE10*/
 select::-ms-expand {
     display: none;
+}
+
+select,select:focus,select:active {
+    box-shadow: none !important;
+    border: 1px solid;
 }

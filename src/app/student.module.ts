@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
 import { StudentProfileComponent } from './student-profile/student-profile.component';
@@ -23,6 +24,7 @@ const routes: Routes=[
 @NgModule({
   imports: [
     CommonModule,
+    HttpModule,
     RouterModule.forChild(routes)
   ],
   declarations: [StudentDashboardComponent, StudentProfileComponent, StudentStudyComponent, StudentHomeworkComponent, StudentVerifyComponent]

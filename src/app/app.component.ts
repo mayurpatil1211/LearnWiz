@@ -16,22 +16,22 @@ export class AppComponent {
 
 	constructor(public router:Router){ 
 		router.events.subscribe((val) => { // see also console.log(val instanceof NavigationEnd) 
-		console.log(Cookie.get('auth_key'))
+		// console.log(Cookie.get('auth_key'))
 
 			if(Cookie.get('auth_key')&& Cookie.get('user_type')=='teacher'){
 				this.isLogin = 1;
-				console.log("login")
+				// console.log("login")
 			}
       else if(Cookie.get('auth_key')&& Cookie.get('user_type')=='student'){
           this.isLogin = 2;
-        console.log("login")
+        // console.log("login")
       }
 		});
 	}
 
 
   ngOnInit(){
-  	console.log("hello")
+  	// console.log("hello")
   }
 
   logout(){

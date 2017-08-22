@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Http } from '@angular/http';
+
 
 @Component({
   selector: 'app-student-verify',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student-verify.component.css']
 })
 export class StudentVerifyComponent implements OnInit {
+	private req: any
+	topicList: [any];
 
-  constructor() { }
+  constructor(private http: Http) { }
 
   ngOnInit() {
+  	this.req = this.http.get('assets/json/homework.json').subscribe(data=>{
+  		this.topicList = data.json() as [any];
+  		console.log(this.topicList)
+  	})
   }
 
 }

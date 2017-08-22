@@ -43,19 +43,13 @@
         </ul>
         <ul class="list-inline header-buttons">
           <li class="list-inline-item ">
-            <a href="#" data-toggle="tooltip" title="To select the Modules">
               <button class="btn btn-xs btn-primary">GO</button>
-            </a>
           </li>
           <li class="list-inline-item">
-            <a href="#" data-toggle="tooltip" title="Go to the Slides">
               <button class="btn btn-success btn-xs"><a href="http://codematrix.space/whiteboard/maths.html" target="_blank" class="teach_slide">TEACH</a></button>
-            </a>
           </li>
           <li class="list-inline-item">
-            <a href="#" data-toggle="tooltip" title="To Publish the Modules">
-              <button class="btn btn-info btn-xs">PUBLISH</button>
-            </a>
+              <button (click)="publishModules();" class="btn btn-info btn-xs">PUBLISH</button>
           </li>
         </ul>
       </div>
@@ -71,15 +65,21 @@
   </div>
   <hr>
   <div id="table-tree-grid" class="row">
-    <tree-root #tree [nodes]="nodes" [options]="" [focused]="true" (event)="onEvent($event)" (initialized)="onInitialized(tree)">
+    <tree-root #tree [nodes]="nodes" [options]="" [focused]="true">
       <ng-template #treeNodeTemplate let-node>
-        <div style="width:100%"> <a href="http://codematrix.space/whiteboard/maths.html" target="_blank">{{ node.data.name }}</a>
-          <!--<input type="date" name="date" class="form-control date-picker date-status-{{node.data.status}}" value={{node.data.date}/>-->
+        <div style="width:100%">
+          <input [hidden]="showPublishCheckbox" (change)="check(node, !node.data.checked)" type="checkbox" [indeterminate]="node.data.indeterminate" [checked]="node.data.checked">
+          <a href="http://codematrix.space/whiteboard/maths.html" target="_blank">{{ node.data.name }}</a>
+          <i [hidden]="!node.data.published"><span  class="glyphicon glyphicon-ok" aria-hidden="true"></span></i>
           <my-date-picker  name="date"  class="date-picker date-status-{{node.data.status}}" [selDate]="node.data.date"  [options]="myDatePickerOptions"></my-date-picker>
         </div>
       </ng-template>
       <ng-template #loadingTemplate>Loading, please hold....</ng-template>
     </tree-root>
+  </div>
+  <br>
+  <div [hidden]="showPublishCheckbox"> 
+      <button (click)="publishSubmit();" class="btn btn-success btn-xs">SUBMIT PUBLISH</button>
   </div>
 </div>
 <!-- container end -->

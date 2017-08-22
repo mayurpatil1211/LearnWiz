@@ -41,6 +41,7 @@ export class PrepareListComponent implements OnInit {
     //disableDays: [{ year: 2017, month: 7, day: 27 }, { year: 2017, month: 8, day: 15 }]
   };
 	isLogin: boolean = true;
+	showPublishCheckbox: boolean = true;
 
   nodes = [];
   constructor() {
@@ -324,6 +325,79 @@ export class PrepareListComponent implements OnInit {
   ngOnInit() {
   }
 
+  //Checkbox options
+   actionMapping: IActionMapping = {
+    mouse: {
+      click: (tree, node) => this.check(node, !node.data.checked)
+    }
+  };
+
+  options: ITreeOptions = {
+    actionMapping: this.actionMapping
+  };
+
+  public check(node, checked) {
+    this.updateChildNodeCheckbox(node, checked);
+    this.updateParentNodeCheckbox(node.realParent);
+  }
+  public updateChildNodeCheckbox(node, checked) {
+    node.data.checked = checked;
+    if (node.children) {
+      node.children.forEach((child) => this.updateChildNodeCheckbox(child, checked));
+    }
+  }
+  public updateParentNodeCheckbox(node) {
+    if (!node) {
+      return;
+    }
+
+    let allChildrenChecked = true;
+    let noChildChecked = true;
+
+    for (const child of node.children) {
+      if (!child.data.checked || child.data.indeterminate) {
+        allChildrenChecked = false;
+      }
+      if (child.data.checked) {
+        noChildChecked = false;
+      }
+    }
+
+    if (allChildrenChecked) {
+      node.data.checked = true;
+      node.data.indeterminate = false;
+    } else if (noChildChecked) {
+      node.data.checked = false;
+      node.data.indeterminate = false;
+    } else {
+      node.data.checked = true;
+      node.data.indeterminate = true;
+    }
+    this.updateParentNodeCheckbox(node.parent);
+  }
+
+  public publishModules(){
+	  this.showPublishCheckbox = false;
+  }
+
+  public publishSubmit(){
+	  this.showPublishCheckbox = true;
+	  for(let node of this.nodes){
+		  node.published = node.checked;
+		  if(node.children){
+			  this.publishCheckedModules(node.children);
+		  }
+	  }
+  }
+
+  public publishCheckedModules(childNodes){
+	  for(let node of childNodes){
+		  node.published = node.checked;
+		  if(childNodes.children){
+			  this.publishCheckedModules(childNodes.children);
+		  }
+	  }
+  }
 }
 
 

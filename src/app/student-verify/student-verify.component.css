@@ -1,0 +1,30 @@
+.study_block{
+	    padding: 5px;
+    border: 1px solid #bfbebe;
+    color: #337ab7;
+}
+
+.study_btn{
+	    text-align: right;
+}
+
+.study_row{
+	padding:10px;
+}
+
+.study_topic_name{
+	text-decoration: none;
+	color: #337ab7;
+}
+
+.study_subj{
+	    padding-right: 25px;
+    width: auto;
+    padding-left: 25px;
+}
+
+.study_subj_div{
+	    padding-bottom: 25px;
+    text-align: center;
+    padding-top: 25px;
+}

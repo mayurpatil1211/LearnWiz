@@ -1,0 +1,54 @@
+.drop_btn{
+   background: #fff;
+        padding-top: 17px;
+    color: #7b7b7b;
+    background-color: rgba(255, 255, 255, 0.08);
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    text-align: center;
+    line-height: 1px;
+    transition: all .2s ease-out;
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
+    /* padding-right: 20px !important; */
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.1s;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+}
+
+.drop_menu{
+text-align: center;
+}
+
+.myprofile{
+	    text-align: center;
+    background: transparent;
+
+}
+
+.myprofile:hover{
+	    text-align: center;
+    background: transparent;
+     font-size: 15px;
+      color: #ff8c00 !important;
+}
+
+.dropdownhover-bottom, .dropdown-menu{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+.drop_btn:hover{
+    font-size: 13px;
+    font-weight: 600;
+    color: #ff8c00 !important;
+    text-decoration: none;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}

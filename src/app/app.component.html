@@ -50,11 +50,15 @@
                      <li class="navItemList">
                         <a routerLink="/teacher/test" [routerLinkActive]="['is-active']" class="nav_items">Test</a>
                     </li>
-                    <li class="navItemList">
-                        <a routerLink="teacher/profile" [routerLinkActive]="['is-active']" class="nav_items">MyProfile</a>
-                    </li>
-                    <li class="navItemList">
-                        <a routerLink="#" class="nav_items" (click) = "logout()">Logout</a>
+              
+                    <li class="dropdown navItemList">
+                         <button class="btn btn-md drop_btn dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">Name <i class="fa fa-caret-down" aria-hidden="true"></i>
+                         </button>
+
+                    <ul class="dropdown-menu drop_menu">
+                        <li><a routerLink="teacher/profile" [routerLinkActive]="['is-active']" class="myprofile">MyProfile</a></li>
+                        <li><a routerLink="#" class="nav_items" (click) = "logout()" class="myprofile">Logout</a></li>
+                    </ul>
                     </li>
 					
                 </ul>
@@ -69,19 +73,23 @@
                         <a routerLink='/student/dashboard' class="nav_items">Dashboard</a>
                     </li>
                     <li class="navItemList">
-                        <a routerLink='#' [routerLinkActive]="['is-active']" class="nav_items">Study</a>
+                        <a routerLink='/student/study' [routerLinkActive]="['is-active']" class="nav_items">Study</a>
                     </li>
           <li class="navItemList">
-                        <a routerLink="#" [routerLinkActive]="['is-active']" class="nav_items">Homework</a>
+                        <a routerLink="/student/homework" [routerLinkActive]="['is-active']" class="nav_items">Homework</a>
                     </li>
                      <li class="navItemList">
-                        <a routerLink="#" [routerLinkActive]="['is-active']" class="nav_items">Verify</a>
+                        <a routerLink="/student/verify" [routerLinkActive]="['is-active']" class="nav_items">Verify</a>
                     </li>
-                    <li class="navItemList">
-                        <a routerLink="/student/profile" [routerLinkActive]="['is-active']" class="nav_items">MyProfile</a>
-                    </li>
-                     <li class="navItemList">
-                        <a routerLink="#" class="nav_items" (click) = "logout()">Logout</a>
+                   
+                    <li class="dropdown navItemList">
+                     <button class="btn btn-md drop_btn dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">Name <i class="fa fa-caret-down" aria-hidden="true"></i>
+                     </button>
+
+                    <ul class="dropdown-menu drop_menu">
+                    <li><a routerLink="/student/profile" [routerLinkActive]="['is-active']" class="myprofile">MyProfile</a></li>
+                    <li><a routerLink="#" class="nav_items" (click) = "logout()" class="myprofile">Logout</a></li>
+                    </ul>
                     </li>
           
                 </ul>

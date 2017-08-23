@@ -1,10 +1,10 @@
 .date-picker{
-     width: 138px;
-     border-radius: 2px;
-     padding-left: 2px;
-     font-size: 13px;
-     font-weight: 700;
-     float:right;
+       width: 138px;
+    border-radius: 2px;
+    /* padding-left: 2px; */
+    font-size: 13px;
+    /* font-weight: 700; */
+    float: right;
 }
 
 .date-status-0{
@@ -30,12 +30,12 @@
 
 /* Menu & drop down */ 
 .hand-arrow-right{
-    vertical-align:middle;
-    height:62px;
-    width:25px;
-    line-height:62px;
-    font-size:medium;
-    color:#fff;
+   vertical-align: middle;
+    height: 5px;
+    width: 25px;
+    line-height: 62px;
+    font-size: 16px;
+   
 }
 
 
@@ -46,8 +46,8 @@
 }
 
 .header-buttons{
-    float: right;
-    margin-top: 20px;
+        float: right;
+    margin-top: 17px;
 }
 
 select {
@@ -55,8 +55,9 @@ select {
     padding: 2px 30px 2px 20px;
     border: none;
     background-color: #FF8C00;
-    border-color: #FF8C00;
-    color: white;
+    color: #000;
+        width: 126px;
+    height: 25px;
      
 }
 
@@ -74,9 +75,131 @@ select::-ms-expand {
 
 .teach_slide{
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
+
+.teach_slide:hover, .teach_slide:focus{
+  text-decoration: none;
+  background: #ff8c00;
+  color: #000;
+}
+
 select,select:focus,select:active {
     box-shadow: none !important;
     border: 1px solid;
+}
+
+.glyphicon-hand-right{
+  color: #000;
+}
+
+.btn-xs[_ngcontent-c1] {
+    background: #ff8c00;
+    border: none;
+    color: black;
+}
+
+.btn-xs:hover, .btn-xs:focus, .btn-xs:active{
+  background: #ff8c00;
+    border: 1px solid #000;
+    color: black;
+}
+
+.filter_row{
+      padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    background-color: #ff8c00;
+    border-radius: 10px;
+}
+.select_filter_div{
+  padding: 0;
+  /*float: left;*/
+}
+
+.thumbs{
+  padding-right: 0;
+  width: 35px;
+}
+
+.filter_main_col{
+  padding: 0px;
+}
+.publish_btns{
+      float: right;
+    text-align: right;
+}
+
+.btnclear .btnclearenabled{
+  display: none !important;
+}
+
+span.mydpicon.icon-mydpremove {
+    display: none !important;
+}
+
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+.filter_row{
+  margin: 10px;
+}
+.thumbs{
+  display: none;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen 
+and (min-device-width : 480px)
+and (max-device-width : 768px) { 
+
+.filter_row{
+  margin: 10px;
+}
+
+.select_filter_div{
+
+    width: 140px;
+    float: left;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 0;
+    margin-right: 3%;
+    margin-left: 3%;
+
+}
+.thumbs{
+  display: none;
+}
+.publish_btns{
+      width: 100%;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.button_block{
+  widows: 50% !important;
+  float: left;
+    padding-left: 25%;
+}
+
+.btn-xs[_ngcontent-c1][_ngcontent-c1] {
+    background: #ff8c00;
+    border: 1px solid #000;
+    color: black;
+}
+
 }

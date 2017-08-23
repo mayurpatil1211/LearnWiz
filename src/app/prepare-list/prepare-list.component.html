@@ -1,21 +1,20 @@
 <div class="container main_page">
-  <div class="row">
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li class="">
-            <a>
-              <select class="form-control">
-                <option selected="true">CLASS</option>
-                <option value="">FIRST YEAR</option>
-                <option value="">SECOND YEAR</option>
-              </select>
-            </a>
-          </li>
-          <li class="hand-arrow-right"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></li>
-          <li class="">
-            <a>
-              <select class="form-control">
+<div class="row filter_row">
+  <div class="col-md-12">
+
+    <div class="col-md-9 filter_main_col">
+      <div class="col-sm-2 select_filter_div">
+        <select class="form-control btn-xs">
+                  <option selected="true">CLASS</option>
+                  <option value="">FIRST YEAR</option>
+                  <option value="">SECOND YEAR</option>
+                </select>
+      </div>
+      <div class="col-sm-1 thumbs">
+        <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+      </div>
+      <div class="col-sm-2 select_filter_div">
+            <select class="form-control btn-xs">
                 <option selected="true">SUBJECT</option>
                 <option>MATHEMATICS</option>
                 <option>PHYSICS</option>
@@ -26,35 +25,42 @@
                 <option>ENGLISH</option>
                 <option>HISTORY</option>
               </select>
-            </a>
-          </li>
-          <li class="hand-arrow-right"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></li>
-          <li class="">
-            <a>
-              <select class="form-control">
+      </div>
+       <div class="col-sm-1 thumbs">
+        <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+      </div>
+
+       <div class="col-sm-2 select_filter_div">
+          <select class="form-control btn-xs">
                 <option selected="true">MODULE</option>
                 <option>ARITHMETIC</option>
                 <option>DIFFERENTIAL</option>
                 <option>INTEGRATION</option>
                 <option>ALGEBRA</option>
               </select>
-            </a>
-          </li>
-        </ul>
-        <ul class="list-inline header-buttons">
-          <li class="list-inline-item ">
-              <button class="btn btn-xs btn-primary">GO</button>
-          </li>
-          <li class="list-inline-item">
-              <button class="btn btn-success btn-xs"><a href="http://codematrix.space/whiteboard/maths.html" target="_blank" class="teach_slide">TEACH</a></button>
-          </li>
-          <li class="list-inline-item">
-              <button (click)="publishModules();" class="btn btn-info btn-xs">PUBLISH</button>
-          </li>
-        </ul>
       </div>
-    </nav>
+        
+    </div>
+
+    <div class="col-md-3 publish_btns">
+     
+      
+          <button class="btn btn-success btn-xs" style="margin-right: 11px;"><a href="http://codematrix.space/whiteboard/maths.html" target="_blank" class="teach_slide">TEACH</a></button>
+<button (click)="publishModules();" class="btn btn-info btn-xs">PUBLISH</button>
+    </div>
+
+
   </div>
+</div>
+
+
+
+
+
+
+
+
+
   <div class="row">
     <div class="col-md-10">
       <h4>Module</h4>

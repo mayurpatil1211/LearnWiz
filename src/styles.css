@@ -681,7 +681,51 @@ table.dataTable tr.even td.sorting_1 {
  display: -webkit-inline-box;
 }
 
+.inputnoteditable{
+      height: 34px;
+    font-size: 12px !important;
+}
 
+.mydp .btnclear, .mydp .btndecrease, .mydp .btnincrease, .mydp .btnpicker {
+    height: 26px;
+    width: 26px;
+    border: none;
+    padding: 0;
+    outline: 0;
+    font: inherit;
+    -moz-user-select: none;
+}
+.mydp .icon-mydpcalendar, .mydp .icon-mydpremove {
+    font-size: 11px !important;
+}
+.date-picker {
+      width: 126px;
+    border-radius: 2px;
+    font-size: 13px;
+    float: right;
+}
+.mydp .selbtngroup {
+    position: relative;
+    white-space: nowrap;
+    width: 1%;
+    font-size: 0;
+        height: 26px !important;
+}
+input.selection.inputnoteditable {
+  height: 25px !important;
+}
+
+.mydp .selectiongroup {
+    position: relative;
+    display: table;
+    border: none;
+    border-spacing: 0;
+    background-color: #FFF;
+    height: 20px !important;
+}
+my-date-picker.date-picker.date-status-2 {
+    height: 27px !important;
+}
 
 /*--------------------------------------------------topic list ends---------------------------------------*/
 
@@ -809,7 +853,7 @@ treenode:last-child > .tree-node > .tree-children::after {
 }
 
 .tree-node-level-1{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #cccccc;
 }
 
 

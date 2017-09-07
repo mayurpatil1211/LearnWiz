@@ -763,7 +763,12 @@ ul
 .section3_body li{
   margin-bottom: 10px;
 }
-
+.mydp .selector{
+  margin-left: -114px !important;
+}
+.mydp .selectorarrowleft:after, .mydp .selectorarrowleft:before {
+    left: 235px !important;
+}
 
 
 
@@ -833,7 +838,9 @@ select::-ms-expand {
     display: none;
 }
 
-
+.tree-children {
+    overflow: inherit !important;
+}
 
 /*-----------------------------------------------------media queries----------------------------------------*/
 

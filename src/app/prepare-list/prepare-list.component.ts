@@ -37,6 +37,7 @@ export class PrepareListComponent implements OnInit {
     openSelectorOnInputClick: true,
     inline: false,
     editableDateField: false,
+		openSelectorTopOfInput : false
     //disableUntil: { year: 2017, month: 7, day: 25 },
     //disableDays: [{ year: 2017, month: 7, day: 27 }, { year: 2017, month: 8, day: 15 }]
   };

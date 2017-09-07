@@ -29,3 +29,7 @@ const routes: Routes=[
   declarations: [IndexComponent, AboutComponent, LearnwizComponent, ContactComponent, LoginComponent]
 })
 export class HomeModule { }
+
+
+// https://www.codingforentrepreneurs.com/projects/angular-django/welcome/?play=true&amp;wvideo=2rj456yx09
+// https://www.codingforentrepreneurs.com/projects/angular-django/welcome/?play=true&amp;wvideo=2rj456yx09

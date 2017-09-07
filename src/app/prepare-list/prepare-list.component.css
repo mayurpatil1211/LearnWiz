@@ -52,11 +52,11 @@
 
 select {
     
-    padding: 2px 30px 2px 20px;
-    border: none;
+    padding: 2px 0 2px 0px;
+   /* border: none;*/
     background-color: #FF8C00;
     color: #000;
-        width: 126px;
+    width: 126px;
     height: 25px;
      
 }
@@ -94,13 +94,13 @@ select,select:focus,select:active {
 }
 
 .btn-xs[_ngcontent-c1] {
-    background: #ff8c00;
-    border: none;
+    background: #ea8825;
+    border: 1px solid #000;
     color: black;
 }
 
 .btn-xs:hover, .btn-xs:focus, .btn-xs:active{
-  background: #ff8c00;
+  background: #ea8825;
     border: 1px solid #000;
     color: black;
 }
@@ -110,7 +110,7 @@ select,select:focus,select:active {
     padding-left: 12px;
     padding-right: 12px;
     padding-bottom: 12px;
-    background-color: #ff8c00;
+    background-color: #ea8825;
     border-radius: 10px;
 }
 .select_filter_div{
@@ -120,7 +120,7 @@ select,select:focus,select:active {
 
 .thumbs{
   padding-right: 0;
-  width: 35px;
+  width: 50px;
 }
 
 .filter_main_col{
@@ -197,7 +197,7 @@ and (max-device-width : 768px) {
 }
 
 .btn-xs[_ngcontent-c1][_ngcontent-c1] {
-    background: #ff8c00;
+    background: #ea8825;
     border: 1px solid #000;
     color: black;
 }

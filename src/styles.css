@@ -108,7 +108,7 @@ a{
     color: #71a3b3;
     background-color: rgba(255, 255, 255, 0.08);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
     color: #71a3b3;
     /*padding-right: 20px !important;*/
 }
@@ -119,24 +119,34 @@ a{
 }
 
 .nav_items {
-     color: #71a3b3;
+     /*color: #71a3b3;*/
     background-color: rgba(255, 255, 255, 0.08);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
     display: inline-block;
     text-align: center;
     line-height: 1px;
-    transition: all .2s ease-out;
+    /*transition: all .2s ease-out;*/
      padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 20px !important;
+        width: 95px !important;
 
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
+  /*-webkit-transform: perspective(1px) translateZ(0);*/
+  /*transform: perspective(1px) translateZ(0);*/
+  /*-webkit-transition-duration: 0.1s;*/
+  /*transition-duration: 0.1s;*/
+  /*-webkit-transition-property: transform;*/
+  /*transition-property: transform;*/
+}
+
+.nav_items:hover{
+    font-size: 12px !important;
+    /*font-weight: 600;*/
+    color: #ff8c00 !important;
+    text-decoration: none;
+    /*-webkit-transform: scale(1.1);*/
+    /*transform: scale(1.1);*/
 }
 
 
@@ -152,12 +162,20 @@ a{
 }*/
 
 .is-active{
-       font-size: 13px;
-    font-weight: 600;
+    font-size: 12px;
+    /*font-weight: 600;*/
     color: #ff8c00 !important;
     text-decoration: none;  
-    -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+    background-color: #ddd;
+    /*-webkit-transform: scale(1.1);*/
+  /*transform: scale(1.1);*/
+}
+.is-active:hover, .is-active:active, .is-active:focus{
+   font-size: 12px;
+    /*font-weight: 600;*/
+    color: #ff8c00 !important;
+    text-decoration: none;  
+    background-color: #ddd !important;
 }
 
 .colorgraph {
@@ -892,6 +910,21 @@ tree-node-content > div {
     align-items: flex-start;
     height: 31px !important;
 }
+
+.node-content-wrapper::before {
+    border-bottom: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    height: 33px !important;
+    top: -19px !important;
+    width: 22px;
+    left: -26px;
+}
+.tree-children::after {
+     border-left: none !important; 
+    height: 100%;
+}
+
+
 /*select {
         -moz-appearance: none;
         -webkit-appearance:none;

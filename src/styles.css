@@ -130,7 +130,7 @@ a{
      padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 20px !important;
-        width: 95px !important;
+        width: 100px !important;
 
   /*-webkit-transform: perspective(1px) translateZ(0);*/
   /*transform: perspective(1px) translateZ(0);*/
@@ -148,6 +148,7 @@ a{
     /*-webkit-transform: scale(1.1);*/
     /*transform: scale(1.1);*/
 }
+
 
 
 
@@ -176,6 +177,11 @@ a{
     color: #ff8c00 !important;
     text-decoration: none;  
     background-color: #ddd !important;
+}
+
+
+.dropdown-menu {
+    min-width: 175px !important;
 }
 
 .colorgraph {

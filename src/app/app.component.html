@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="./assets/img/colored.jpg" class="img-responsive" style="width: 50px;"><h3 class="top_logo1">LearnWiz<sup>©</sup></h3>
+          <a class="navbar-brand" href="#"><img src="./assets/img/colored.ico" class="img-responsive" style="width: 50px;"><h3 class="top_logo1">LearnWiz<sup>©</sup></h3>
                 <span class="top_logo_text1">Honing the Art of Education</span></a>
         </div>
     
@@ -51,7 +51,7 @@
                         <a routerLink="/teacher/test" [routerLinkActive]="['is-active']" class="nav_items">Test</a>
                     </li>
               
-                    <li class="dropdown navItemList">
+                 <!--    <li class="dropdown navItemList">
                          <button class="btn btn-md drop_btn dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">{{username}} <i class="fa fa-caret-down" aria-hidden="true"></i>
                          </button>
 
@@ -59,7 +59,19 @@
                         <li><a routerLink="teacher/profile" [routerLinkActive]="['is-active']" class="myprofile">MyProfile</a></li>
                         <li><a routerLink="#" class="nav_items" (click) = "logout()" class="myprofile">Logout</a></li>
                     </ul>
+                    </li> -->
+
+
+                    <li class="drop_items navItemList">
+                        <a href="#">{{username}} &#9662;</a>
+                        <ul class="dropdown">
+                            <li class="drop_items"><a routerLink="teacher/profile" [routerLinkActive]="['is-active']" class="drop_items_a">My Profile</a></li>
+                            <li class="drop_items"><a routerLink="#" class="drop_items_a" (click) = "logout()">Logout</a></li>
+                        </ul>
                     </li>
+
+
+
 					
                 </ul>
            
@@ -82,14 +94,12 @@
                         <a routerLink="/student/verify" [routerLinkActive]="['is-active']" class="nav_items">Verify</a>
                     </li>
                    
-                    <li class="dropdown navItemList">
-                     <button class="btn btn-md drop_btn dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">{{username}} <i class="fa fa-caret-down" aria-hidden="true"></i>
-                     </button>
-
-                    <ul class="dropdown-menu drop_menu">
-                    <li><a routerLink="/student/profile" [routerLinkActive]="['is-active']" class="myprofile">MyProfile</a></li>
-                    <li><a routerLink="#" class="nav_items" (click) = "logout()" class="myprofile">Logout</a></li>
-                    </ul>
+                   <li class="drop_items navItemList">
+                        <a href="#">{{username}} &#9662;</a>
+                        <ul class="dropdown">
+                            <li class="drop_items"><a routerLink="student/profile" [routerLinkActive]="['is-active']" class="drop_items_a">My Profile</a></li>
+                            <li class="drop_items"><a routerLink="#" class="drop_items_a" (click) = "logout()">Logout</a></li>
+                        </ul>
                     </li>
           
                 </ul>

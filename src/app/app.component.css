@@ -13,7 +13,7 @@ router-outlet::-webkit-scrollbar-thumb {
 
 
 
-
+/*
 .drop_btn{
    background: #fff;
     padding-top: 18px;
@@ -25,15 +25,6 @@ router-outlet::-webkit-scrollbar-thumb {
     text-align: center;
     line-height: 1px;
     transition: all .2s ease-out;
-    /* padding-top: 15px; */
-    /* padding-bottom: 15px; */
-    /* padding-right: 20px !important; */
-    /*-webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    transition-duration: 0.1s;
-    transition-property: -webkit-transform;
-    transition-property: transform;
-    transition-property: transform, -webkit-transform;*/
 }
 
 .drop_menu{
@@ -51,7 +42,7 @@ text-align: center;
 
 .myprofile:hover{
 	    text-align: center;
-    background: transparent;
+        background: transparent;
      font-size: 12px;
       color: #ff8c00 !important;
 }
@@ -65,12 +56,9 @@ text-align: center;
 
 .drop_btn:hover{
     font-size: 14px !important;
-    /*font-weight: 600;*/
     color: #ff8c00 !important;
     text-decoration: none;
-    /*-webkit-transform: scale(1.1);
-    transform: scale(1.1);
-*/}
+}
 
 .dropdown-menu>li>a {
     display: block;
@@ -86,3 +74,57 @@ text-align: center;
         left: -47.8438px !important;
     right: auto;
 }
+*/
+
+
+   .dropdown{
+        padding: 0;
+        list-style: none;
+        background: #fff;
+        margin-top: 0px;
+    }
+    .drop_items{
+        display: inline-block;
+        position: relative;
+        line-height: 21px;
+        text-align: left;
+    }
+    .drop_items>a{
+        color: #000;
+    }
+    .drop_items_a{
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        padding: 8px 25px;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .drop_items_a:hover{
+         text-align: center;
+        background: transparent;
+        font-size: 14px;
+        color: #ff8c00 !important;
+    }
+
+    .drop_items:hover{
+        color: orange;
+        background: #fff;
+    }
+    .dropdown{
+        min-width: 100%; /* Set width of the dropdown */
+        background: #fff;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+        border: 1px solid #ddd;
+        box-shadow: 5px 5px 5px #888888;
+    }
+    .drop_items:hover ul.dropdown{
+        display: block; /* Display the dropdown */
+    }
+   .dropdown>li{
+        display: block;
+    }

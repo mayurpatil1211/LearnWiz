@@ -92,7 +92,8 @@ select,select:focus,select:active {
   color: #000;
 }
 
-.btn-xs[_ngcontent-c1] {
+.btn-xs
+ {
     background: #ea8825;
     border: 1px solid #000;
     color: black;
@@ -197,7 +198,7 @@ and (max-device-width : 768px) {
     padding-left: 25%;
 }
 
-.btn-xs[_ngcontent-c1][_ngcontent-c1] {
+.btn-xs {
     background: #ea8825;
     border: 1px solid #000;
     color: black;

@@ -17,8 +17,8 @@ router-outlet::-webkit-scrollbar-thumb {
 .drop_btn{
    background: #fff;
     padding-top: 18px;
-    color: #7b7b7b;
-    font-size: 12px !important;
+    color: #000;
+    font-size: 14px !important;
     background-color: rgba(255, 255, 255, 0.08);
     text-decoration: none;
     display: inline-block;
@@ -64,7 +64,7 @@ text-align: center;
 }
 
 .drop_btn:hover{
-    font-size: 12px !important;
+    font-size: 14px !important;
     /*font-weight: 600;*/
     color: #ff8c00 !important;
     text-decoration: none;

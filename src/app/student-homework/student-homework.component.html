@@ -1,37 +1,91 @@
 <div class="container main_page">
-	<div class="row">
-	<div class="col-md-12 study_subj_div">
-		<span class="study_subj">All</span>
-		<span class="study_subj">Maths</span>
-		<span class="study_subj">Chemistry</span>
-		<span class="study_subj">Biology</span>
-		<span class="study_subj">Physics</span>
-		<span class="study_subj">Langauge</span>
+<div class="row filter_row">
+  <div class="col-md-12">
 
-	</div>
+    <div class="col-md-9 filter_main_col">
+      <div class="col-sm-2 select_filter_div">
+        <select class="form-control btn-xs">
+                  <option selected="true">CLASS</option>
+                  <option value="">FIRST YEAR</option>
+                  <option value="">SECOND YEAR</option>
+                </select>
+      </div>
+      <div class="col-sm-1 thumbs">
+        <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+      </div>
+      <div class="col-sm-2 select_filter_div">
+            <select class="form-control btn-xs">
+                <option selected="true">SUBJECT</option>
+                <option>MATHEMATICS</option>
+                <option>PHYSICS</option>
+                <option>CHEMISTRY</option>
+                <option>BIOLOGY</option>
+                <option>COMPUTERS</option>
+                <option>STATISTICS</option>
+                <option>ENGLISH</option>
+                <option>HISTORY</option>
+              </select>
+      </div>
+       <div class="col-sm-1 thumbs">
+        <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+      </div>
+
+       <div class="col-sm-2 select_filter_div">
+          <select class="form-control btn-xs">
+                <option selected="true">MODULE</option>
+                <option>ARITHMETIC</option>
+                <option>DIFFERENTIAL</option>
+                <option>INTEGRATION</option>
+                <option>ALGEBRA</option>
+              </select>
+      </div>
+        
+    </div>
+
+    <div class="col-md-3 publish_btns">
+     
+      
+         
+<button (click)="publishModules();" class="btn btn-xs">STUDY</button>
+    </div>
 
 
-
-		<div class="col-md-12">
-
-
-			<div class="col-sm-3" *ngFor = 'let item of topicList'>
-				<div class="row study_row">
-				<div class="col-sm-12 study_block">
-					<div class="col-sm-12">
-						<a href="http://codematrix.space/whiteboard/maths.html" class="study_topic_name" target="_blank"><p>{{item.topic_name}}</p></a>
-						<p>{{item.date}}</p>
-						<p>{{item.status}}</p>
-					</div>
-					<div class="col-sm-12 study_btn">
-						<a href="http://codematrix.space/whiteboard/maths.html" target="_blank"><button class="btn btn-sm btn-primary">VIEW</button></a>
-					</div>
-				</div>
-				</div>
-			</div>
-
-		</div>
-
-
-	</div>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+  <div class="row">
+    <div class="col-md-10">
+      <h4>Module</h4>
+    </div>
+    <div class="col-md-2 text-center">
+      <h4>Date</h4>
+    </div>
+  </div>
+  <hr>
+  <div id="table-tree-grid" class="row">
+    <tree-root #tree [nodes]="nodes" [options]="" [focused]="true">
+      <ng-template #treeNodeTemplate let-node>
+        <div style="width:100%">
+          <input [hidden]="showPublishCheckbox" (change)="check(node, !node.data.checked)" type="checkbox" [indeterminate]="node.data.indeterminate" [checked]="node.data.checked">
+          <a href="http://codematrix.space/whiteboard/maths.html" target="_blank">{{ node.data.name }}</a>
+          <i [hidden]="!node.data.published"><span  class="glyphicon glyphicon-ok" aria-hidden="true"></span></i>
+          <my-date-picker  name="date"  class="date-picker date-status-{{node.data.status}}" [selDate]="node.data.date"  [options]="myDatePickerOptions"></my-date-picker>
+        </div>
+      </ng-template>
+      <ng-template #loadingTemplate>Loading, please hold....</ng-template>
+    </tree-root>
+  </div>
+  <br>
+  <div [hidden]="showPublishCheckbox"> 
+      <button (click)="publishSubmit();" class="btn btn-success btn-xs">SUBMIT PUBLISH</button>
+  </div>
+</div>
+<!-- container end -->

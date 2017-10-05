@@ -8,17 +8,18 @@ constructor(private router: Router){
 
 }
 canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot){
-if(Cookie.get('auth_key'))
+if(Cookie.get('auth_token'))
 {
 
 // console.log(window.localStorage.getItem('auth_key'));
 return true;
 }
 else{
-console.log('you must be loggef in');
+console.log('you must be logged in');
 this.router.navigate(['/']);
 return false;
 }
 
 }
 }
+

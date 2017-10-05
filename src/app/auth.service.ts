@@ -1,5 +1,6 @@
 
 import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Rx';
 
@@ -10,26 +11,12 @@ declare var Storages: any;
 export class AuthService {
   data = <any>{};
 isAuthenticated: boolean = false;
-  constructor( private router: Router) {}
+  constructor(private http: Http, private router: Router) {}
 
 authenticatenow(usercreds) :Observable<any>{
-  console.log(usercreds);
-  if(usercreds.usr_email == 'teacher@learnwiz.com' && usercreds.usr_password == 'teacher'){
-    this.data['responseCode'] = 1000;
-    this.data['auth_key'] = "dasdjkdha88jnknkj";
-    this.data['user_type'] = "teacher";
-  }else if(usercreds.usr_email == 'student@learnwiz.com' && usercreds.usr_password == 'student'){
-      this.data['responseCode'] = 1005;
-      this.data['auth_key'] = "dasdjkdha88jnknk";
-      this.data['user_type'] = "student";
-  }
-   else{
-    this.data['responseCode'] = 1105;
-    this.data['message'] = "Invalid Credentials";
-  }
-return this.data;
-//  return this.http.post('http://13.228.49.155/trzapi/index.php/TourizAPI/checkLogin', usercreds)
-//  .map((response:Response)=> response.json());
+  console.log(usercreds)
+return this.http.post('https://learnwiz-back.herokuapp.com/auth/login', usercreds)
+.map((responce:Response)=>responce.json());
 
 }
 

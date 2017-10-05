@@ -35,34 +35,105 @@ for (let i in this.form.controls) {
 this.form.controls[i].markAsTouched();
 }
 
-      if (this.form.valid) {
-      this.data = this.form.value;
-      console.log(this.data)
-      this.response = this.auth.authenticatenow(this.data)
-      console.log(this.response);
 
-      if (this.response.responseCode == 1000) {
-      // let storage = Storages.localStorage;
-      Cookie.set('auth_key', this.response.auth_key);
-      Cookie.set('user_name',this.data.userName);
-      Cookie.set('user_type', "teacher");
-      console.log(this.response);
 
+
+
+
+if (this.form.valid) {
+this.data = this.form.value;
+console.log(this.data)
+this.response = this.auth.authenticatenow(this.data)
+.subscribe((data)=>{
+  console.log(data)
+  if(data.status == 'success'){
+    console.log(data.user_role)
+    if(data.user_role == 2){
+          Cookie.set('auth_token', data.auth_token);
+          Cookie.set('user_role_id',data.user_role);
+          Cookie.set('user_type', "teacher");
+          Cookie.set('username', data.username)
+          this.isAuthenticated = true;
+          this.router.navigate(['/teacher/dashboard']);
+    }else if(data.user_role == 3){
+      Cookie.set('auth_token', data.auth_token);
+      Cookie.set('user_role_id', data.user_role);
+      Cookie.set('user_type', "student")
+      Cookie.set('username', data.username)
       this.isAuthenticated = true;
-      this.router.navigate(['/teacher/dashboard']);
-      }
-
-      else if(this.response.responseCode == 1005){
-      Cookie.set('auth_key', this.response.auth_key);
-      Cookie.set('user_name',this.data.userName);
-      Cookie.set('user_type', "student");
-      console.log(this.response);
-       this.isAuthenticated = true;
       this.router.navigate(['/student/dashboard']);
-}
+    }else{
+      alert("invalid email")
+    }
+         
+  }else if(data.status == 400){
+    alert('Invalid Email or Password')
+  }
+})
+console.log(this.response);
 
 }
+
+
+
+
+
+
 }
 
 
 }
+
+
+    // onSubmit = function () {
+    //   for (let i in this.form.controls) {
+    //   this.form.controls[i].markAsTouched();
+    //   }
+      
+    //         if (this.form.valid) {
+    //         this.data = this.form.value;
+    //         console.log(this.data)
+    //         this.response = this.auth.authenticatenow(this.data)
+    //         .subscribe((data)=>{
+    //           if(data.status == 'success'){
+    //             console.log(data.auth_token)
+    //                   Cookie.set('auth_token', data.auth_token);
+    //                   Cookie.set('user_role_id',data.user_role);
+    //                   this.isAuthenticated = true;
+    //                   this.router.navigate(['dashboards/dashboard']);
+    //           }
+    //         })
+    //         console.log(this.response);
+      
+    //   }
+    //   }
+
+    
+
+//       if (this.response.responseCode == 1000) {
+//       // let storage = Storages.localStorage;
+//       Cookie.set('auth_key', this.response.auth_key);
+//       Cookie.set('user_name',this.data.userName);
+//       Cookie.set('user_type', "teacher");
+//       console.log(this.response);
+
+//       this.isAuthenticated = true;
+//       this.router.navigate(['/teacher/dashboard']);
+//       }
+
+//       else if(this.response.responseCode == 1005){
+//       Cookie.set('auth_key', this.response.auth_key);
+//       Cookie.set('user_name',this.data.userName);
+//       Cookie.set('user_type', "student");
+//       console.log(this.response);
+//        this.isAuthenticated = true;
+//       this.router.navigate(['/student/dashboard']);
+//     }else if(this.responce.responceCode == 1111){
+//       Cookie.set('auth_key', this.responce.auth_key);
+//       Cookie.set('user_name', this.data.username);
+//       Cookie.set('user_type', "admin");
+//      this.isAuthenticated = true;
+//      console.log("i am in admin")
+//      window.location.href = 'https://learnwiz-admin.herokuapp.com';
+
+// }

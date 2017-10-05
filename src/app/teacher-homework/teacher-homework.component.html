@@ -1,21 +1,20 @@
 <div class="container main_page">
-  <div class="row">
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li class="">
-            <a>
-              <select class="form-control ">
-                <option selected="true">CLASS</option>
-                <option value="">FIRST YEAR</option>
-                <option value="">SECOND YEAR</option>
-              </select>
-            </a>
-          </li>
-          <li class="hand-arrow-right"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></li>
-          <li class="">
-            <a>
-              <select class="form-control">
+<div class="row filter_row">
+  <div class="col-md-12">
+
+    <div class="col-md-9 filter_main_col">
+      <div class="col-sm-2 select_filter_div">
+        <select class="form-control btn-xs">
+                  <option selected="true">CLASS</option>
+                  <option value="">FIRST YEAR</option>
+                  <option value="">SECOND YEAR</option>
+                </select>
+      </div>
+      <div class="col-sm-1 thumbs">
+        <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+      </div>
+      <div class="col-sm-2 select_filter_div">
+            <select class="form-control btn-xs">
                 <option selected="true">SUBJECT</option>
                 <option>MATHEMATICS</option>
                 <option>PHYSICS</option>
@@ -26,55 +25,67 @@
                 <option>ENGLISH</option>
                 <option>HISTORY</option>
               </select>
-            </a>
-          </li>
-          <li class="hand-arrow-right"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></li>
-          <li class="">
-            <a>
-              <select class="form-control">
+      </div>
+       <div class="col-sm-1 thumbs">
+        <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+      </div>
+
+       <div class="col-sm-2 select_filter_div">
+          <select class="form-control btn-xs">
                 <option selected="true">MODULE</option>
                 <option>ARITHMETIC</option>
                 <option>DIFFERENTIAL</option>
                 <option>INTEGRATION</option>
                 <option>ALGEBRA</option>
               </select>
-            </a>
-          </li>
-        </ul>
-        <ul class="list-inline header-buttons">
-          <li class="list-inline-item ">
-            <a href="#" data-toggle="tooltip" title="To select the Modules">
-              <button class="btn btn-xs btn-primary">GO</button>
-            </a>
-          </li>
-     
-          <li class="list-inline-item">
-            <a href="#" data-toggle="tooltip" title="To Publish the Modules">
-              <button class="btn btn-info btn-xs">PUBLISH</button>
-            </a>
-          </li>
-        </ul>
       </div>
-    </nav>
+        
+    </div>
+
+    <div class="col-md-3 publish_btns">
+     
+      
+         
+<button (click)="publishModules();" class="btn btn-xs">PUBLISH</button>
+    </div>
+
+
   </div>
+</div>
+
+
+
+
+
+
+
+
+
   <div class="row">
     <div class="col-md-10">
-      <h4>Homework</h4> </div>
+      <h4>Module</h4>
+    </div>
     <div class="col-md-2 text-center">
-      <h4>Date</h4> </div>
+      <h4>Date</h4>
+    </div>
   </div>
   <hr>
-
-
   <div id="table-tree-grid" class="row">
-    <tree-root #tree [nodes]="nodes" [options]="" [focused]="true" (event)="onEvent($event)" (initialized)="onInitialized(tree)">
+    <tree-root #tree [nodes]="nodes" [options]="" [focused]="true">
       <ng-template #treeNodeTemplate let-node>
-        <div style="width:100%"> <a href="http://codematrix.space/whiteboard/maths/{{node.data.id}}.html" target="_blank">{{ node.data.name }}</a>
-          <input type="date" name="date" class="date-picker date-status-{{node.data.status}}" value={{node.data.date}}/> </div>
-      </ng-template>s
+        <div style="width:100%">
+          <input [hidden]="showPublishCheckbox" (change)="check(node, !node.data.checked)" type="checkbox" [indeterminate]="node.data.indeterminate" [checked]="node.data.checked">
+          <a href="http://codematrix.space/whiteboard/maths.html" target="_blank">{{ node.data.name }}</a>
+          <i [hidden]="!node.data.published"><span  class="glyphicon glyphicon-ok" aria-hidden="true"></span></i>
+          <my-date-picker  name="date"  class="date-picker date-status-{{node.data.status}}" [selDate]="node.data.date"  [options]="myDatePickerOptions"></my-date-picker>
+        </div>
+      </ng-template>
       <ng-template #loadingTemplate>Loading, please hold....</ng-template>
     </tree-root>
   </div>
-
+  <br>
+  <div [hidden]="showPublishCheckbox"> 
+      <button (click)="publishSubmit();" class="btn btn-success btn-xs">SUBMIT PUBLISH</button>
+  </div>
 </div>
 <!-- container end -->
